@@ -1,0 +1,15 @@
+<div class="carousel">
+    <div class="carousel__wrapper d-flex" [style.left.%]="-offset">
+        <div *ngFor="let bet of bets" class="carousel__item-container">
+            <div class="carousel__item">
+                <app-bet-icon [bet]="bet"></app-bet-icon>
+            </div>
+        </div>
+    </div>
+    <div class="carousel__control carousel__control--prev" (click)="prev()">
+        <i class="fas fa-chevron-left chevron"></i>
+    </div>
+    <div class="carousel__control carousel__control--next" (click)="next()">
+        <i class="fas fa-chevron-right chevron"></i>
+    </div>
+</div>

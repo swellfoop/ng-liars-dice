@@ -1,1 +1,57 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+    font-size: 62.5%;
+}
+
+$font-size-base: 1.6rem;
+@import '~bootstrap/scss/bootstrap';
+
+$fa-font-path: './assets/fonts/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '~@fortawesome/fontawesome-free/scss/solid.scss';
+
+.font-family-base {
+    font-family: $font-family-base;
+}
+
+$carousel-size: 6rem;
+
+.carousel {
+    display: block;
+    position: relative;
+    height: $carousel-size;
+    width: $carousel-size;
+    overflow: hidden;
+
+    &__wrapper {
+        position: absolute;
+        top: 0;
+        transition: left .2s ease-in-out;
+    }
+
+    &__item {
+        height: $carousel-size;
+        width: $carousel-size;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__control {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        height: $carousel-size;
+        background-color: white;
+        cursor: pointer;
+
+        &--prev {
+            left: 0;
+        }
+
+        &--next {
+            right: 0;
+        }
+    }
+}

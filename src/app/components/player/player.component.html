@@ -1,0 +1,17 @@
+<div class="d-flex m-2 align-items-start">
+    <div class="player h-100 p-2">
+        <h1 class="mb-4">{{ player.name }}</h1>
+        <h6 [class.text-white]="!player.isActive">Active player</h6>
+        <app-hand class="d-block mb-2" [hand]="player.hand"></app-hand>
+        <!-- <app-bet *ngIf="player.type === PLAYER_TYPE.player" [player]="player"></app-bet> -->
+        <app-bet [player]="player"></app-bet>
+    </div>
+    <div class="debug ml-4 border rounded p-2">
+        <h4>Debug</h4>
+        <button class="btn btn-danger" (click)="player.lose()">lose</button>
+        <div class="btn btn-primary ml-2" (click)="player.roll()">roll</div>
+        <button class="btn ml-2" (click)="player.reset()">reset</button>
+    </div>
+</div>
+
+

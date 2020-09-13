@@ -1,0 +1,4 @@
+<app-bet-carousel [bets]="bets.allowedBets" (activeBet)="updateActiveBet($event)"></app-bet-carousel>
+
+<button class="btn btn-primary" (click)="bet()">Bet</button>
+<button class="btn ml-2" (click)="call()">Call</button>

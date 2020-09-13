@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "liars-dice"
+    }
+  },
+  "defaultProject": "liars-dice",
+  "cli": {
+    "analytics": false
+  }
 }
